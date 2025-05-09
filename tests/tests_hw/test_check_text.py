@@ -1,17 +1,18 @@
 from pages.demoqa import DemoQa
-from components.components import WebElement
+from pages.elements_page import ElementsPage
 
 
 def test_footer_text(browser):
     demo_qa_page = DemoQa(browser)
     demo_qa_page.visit()
-    footer = WebElement(browser, 'footer span')
-    assert footer.get_text() == '© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.'
+    assert demo_qa_page.text_footer.get_text() == '© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.'
 
 
-def test_center_text_on_elements_page(browser):
+def test_check_text(browser):
     demo_qa_page = DemoQa(browser)
+    element_page = ElementsPage(browser)
     demo_qa_page.visit()
-    demo_qa_page.click_on_the_btn()
-    center_text = WebElement(browser, '#app > div > div > div > div.col-12.mt-4.col-md-6')#локатор определил через dev tools
-    assert center_text.get_text() == 'Please select an item from left to start practice.'
+    demo_qa_page.btn_elements.click()
+    assert element_page.text_please.get_text() == 'Please select an item from left to start practice.'
+
+#def test_page_elements
