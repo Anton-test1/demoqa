@@ -22,4 +22,3 @@ class ElementsPage(BasePage):
         else:
             return False
 
-        #self.text_please = WebElement(driver, 'div.col-12.mt-4.col-md-6')

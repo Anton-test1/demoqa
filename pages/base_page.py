@@ -7,8 +7,6 @@ class BasePage:
         self.driver = driver
         self.base_url = base_url
 
-    #def visit(self):
-    #    return self.driver.get(self.base_url)
 
     def find_element(self, locator):
         return self.driver.find_element(By.CSS_SELECTOR, locator)
