@@ -14,4 +14,4 @@ def test_form_validate(browser):
 
     form_page.btn_submit.click_force()
     time.sleep(2)
-    assert 'was-validated' in form_page.form.get_dom_attribute('class')
+    assert 'was-validated' in form_page.user_form.get_dom_attribute('class')
