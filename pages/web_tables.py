@@ -3,7 +3,8 @@ from components.components import WebElement
 
 class WebTables(BasePage):
     def __init__(self, driver):
-        super().__init__(driver, "https://demoqa.com/webtables")
+        self.base_url = "https://demoqa.com/webtables"
+        super().__init__(driver, self.base_url)
 
         self.add_button = WebElement(driver, "addNewRecordButton", "id")
         self.dialog = WebElement(driver, "body > div.fade.modal.show > div > div", "css")
