@@ -21,6 +21,10 @@ class WebTables(BasePage):
         self.edit_buttons = WebElement(driver, "span[title='Edit']", "css")
         self.delete_buttons = WebElement(driver, "span[title='Delete']", "css")
 
+        self.column_headers = WebElement(driver, ".rt-resizable-header", "css")
+        self.header_sort_asc = WebElement(driver, ".rt-resizable-header.sort-asc", "css")
+        self.header_sort_desc = WebElement(driver, ".rt-resizable-header.sort-desc", "css")
+
     def open_add(self):
         self.add_button.click()
 
