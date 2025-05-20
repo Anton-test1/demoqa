@@ -14,12 +14,14 @@ def test_small_btn(browser):
     page = ModalDialogsPage(browser)
     page.visit()
     time.sleep(1)
+
     page.small_modal_btn.click()
     time.sleep(2)
 
+    assert page.small_modal_content.visible()
     page.small_modal_close.click()
     time.sleep(1)
-
+    assert page.small_modal_content.hide()
 
 def test_large_btn(browser):
     page = ModalDialogsPage(browser)
@@ -29,7 +31,7 @@ def test_large_btn(browser):
     page.large_modal_btn.click()
     time.sleep(2)
 
+    assert page.large_modal_content.visible()
     page.large_modal_close.click()
     time.sleep(2)
-
-#проверяем наличие кнопок,затем работаем с каждым модальным окном
+    assert page.large_modal_content.hide()

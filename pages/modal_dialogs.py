@@ -14,3 +14,5 @@ class ModalDialogsPage(BasePage):
         self.small_modal_close = WebElement(driver, '#closeSmallModal')
         self.large_modal_close = WebElement(driver, '#closeLargeModal')
         self.modal_content = WebElement(driver, '.modal-content')
+        self.small_modal_content = WebElement(driver,'div.modal.fade.show .modal-dialog.modal-sm')
+        self.large_modal_content = WebElement(driver,'div.modal.fade.show .modal-dialog.modal-lg')
